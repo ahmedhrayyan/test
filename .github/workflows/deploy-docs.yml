@@ -22,13 +22,17 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+        with:
+          working-directory: docs-website
       - name: Build website
         run: yarn build
+        with:
+          working-directory: docs-website
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: docs-website/build
 
   deploy:
     name: Deploy to GitHub Pages
