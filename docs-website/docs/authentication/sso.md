@@ -1,3 +1,5 @@
+import FlowChart from '../assets/sso-flowchart.svg'
+
 ---
 title: Single Sign-On
 ---
@@ -14,7 +16,7 @@ First, you need to be familiar with the following:
 ## Abstract
 The application uses the Authorization Code Flow to authenticate users. Check out the below diagram to understand the flow:
 
-<img src="/img/sso-flowchart.svg" alt="SSO FlowChart" />
+<FlowChart style={{width: "100%", height: "auto"}} />
 
 ## API Documentation
 In our flow, there is three applications responsible for the SSO:
@@ -24,8 +26,8 @@ In our flow, there is three applications responsible for the SSO:
 
 ### OP Documentation
 You can find thorough documentation on how to integrate with **VisitSaudi** in the following document:
-<object data="/docs/Saudi_Smart_ID_OIDC_Integration_Guide_V1.pdf" type="application/pdf" width="100%" height="500px">
-  <p>Unable to display PDF file. <a href="/docs/Saudi_Smart_ID_OIDC_Integration_Guide_V1.pdf">Download</a> instead.</p>
+<object data={require("../assets/Saudi_Smart_ID_OIDC_Integration_Guide_V1.pdf").default} type="application/pdf" width="100%" height="500px">
+  <p>Unable to display PDF file. <a href={require("../assets/Saudi_Smart_ID_OIDC_Integration_Guide_V1.pdf").default}>Download</a> instead.</p>
 </object>
 
 ### Backend API Docs
